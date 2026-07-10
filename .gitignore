@@ -1,0 +1,19 @@
+.venv/
+.pylibs/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Deployment packages (upload separately, not versioned)
+website.zip
+*.zip
+
+# Local image backups — not used on the live site
+images/archive/
+
+# Full-size PNG originals in images/ root (site uses JPG + 列表缩略图/)
+images/*.png
+!images/logo.png
+
+# Internal notes (optional local only)
+docs/
