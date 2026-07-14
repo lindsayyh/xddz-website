@@ -1,11 +1,17 @@
 # Deploy the static site to GitHub Pages.
-# After you enable Pages (Settings → Pages → Source: GitHub Actions),
-# every push to master updates: https://lindsayyh.github.io/xddz-website/
+# Pushes to this feature branch OR master update:
+#   https://lindsayyh.github.io/xddz-website/
+# You do NOT need to merge the PR first — enable Pages (Source: GitHub Actions)
+# and this workflow will publish the branch you push.
 name: Deploy GitHub Pages
 
 on:
   push:
-    branches: [master]
+    # Deploy from this feature branch without merging to master first.
+    # Add master later if you want the live Pages site to follow master after merge.
+    branches:
+      - cursor/optimize-images-loading-9aba
+      - master
   workflow_dispatch:
 
 permissions:
