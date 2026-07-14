@@ -15,7 +15,9 @@
   --radius: 12px;
   --radius-sm: 8px;
   --header-height: 88px;
-  --font: "Noto Sans SC", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  /* System CJK fonts only — avoid Google Fonts (often slow/blocked in China). */
+  --font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", sans-serif;
 }
 
 /* ===== 基础 ===== */
