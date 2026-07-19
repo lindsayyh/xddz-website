@@ -66,12 +66,12 @@
                                           <p class="MsoBodyTextIndent2" style="line-height:18.0pt;">当车牌识别系统在车辆在入口处和出口处拍照到车牌时，也同时拍到了数字时钟上的标准时刻值。通过二者时刻的比对，就可对停车场的计时系统进行计时误差检定，也可对多出入口的时刻同步误差进行检定。 </p>
                                           <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;">2.检定仪的组成与各部分功能 </p>
                                           <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;">根据这个方法所研制的视频触发车牌识别停车计时系统检定仪，包括标准数字时钟、模拟汽车车牌和平板电脑，如图1所示。 </p>
-                                          <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;"><img src="assets/a06_wx6-1.webp" alt="" loading="lazy" /></p>
+                                          <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;"><img src="assets/a06_wx6-1.png" alt="" loading="lazy" /></p>
                                           <p class="article-p" style="text-indent:57.75pt;line-height:18.0pt;"> </p>
                                           <p class="MsoBodyTextIndent2" style="line-height:18.0pt;">标准数字时钟用来显示当前标准时刻，模拟车牌可代表某辆汽车。平板用来记录和管理检定数据,并可与数字时钟进行交互。 </p>
                                           <p class="MsoBodyTextIndent2" style="line-height:18.0pt;">标准数字时钟如图2，包含：GPS时钟模块、RTC时钟模块、通信模块、高稳定度晶振、ARM处理器模块、键盘模块、户外用显示器和输出测试模块。 </p>
                                           <p class="MsoBodyTextIndent2" style="line-height:18.0pt;">GPS时钟模块，通过卫星定位获得准确的当前时刻，并可自动对RTC时钟进行校正。RTC时钟模块，属于硬件实时时钟，经初始化后可产生当前时刻数据，可独立运行，适合于GPS信号弱的场所。</p>
-                                          <p class="MsoBodyTextIndent2" style="line-height:18.0pt;"><img src="assets/a06_wx6-2.webp" alt="" loading="lazy" /></p>
+                                          <p class="MsoBodyTextIndent2" style="line-height:18.0pt;"><img src="assets/a06_wx6-2.png" alt="" loading="lazy" /></p>
                                           <p class="MsoBodyTextIndent2" style="line-height:18.0pt;">通信模块用以和便携式电脑通信。户外用显示器,用以将当前时刻显示在它上面。高稳定度晶振，用以给ARM处理器提供工作节拍和准确的计时。输出测试模块，用以输出测试本机的信号。 </p>
                                           <p class="MsoBodyTextIndent2" style="line-height:18.0pt;">3.户外显示器设计难点                                  </p>
                                           <p class="MsoBodyTextIndent2" style="line-height:18.0pt;">检定仪设计的技术难点之一是户外显示器的设计。显示器上显示的时刻值是要不断更新的，且要在户外应用，必须考虑下面几个问题。 </p>
@@ -87,7 +87,7 @@
                                           <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;">上述技术指标完全符合国家JJG  1010-2013《电子停车计时收费表检定规程》中相关技术要求。</p>
                                           <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;">三、计时检定过程 </p>
                                           <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;">如图3所示,在入口，将检定仪放置于计时系统拍照区域后，系统拍照到模拟车牌的同时，也拍到了数字时钟上的标准时刻值。对于拍照识别这个事件1，车牌识别计时系统的记下的时刻是t1，而数字时钟的时刻值是T1。</p>
-                                          <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;"><img src="assets/a06_wx6-3.webp" alt="" loading="lazy" /></p>
+                                          <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;"><img src="assets/a06_wx6-3.png" alt="" loading="lazy" /></p>
                                           <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;">经历一段时间后，当车牌识别系统在车辆出口拍照到这个车牌时，也同时拍到了数字时钟上的标准时刻值，对出口拍照识别这个事件2，车牌识别计时系统的时刻是t2，而数字时钟的时刻值是T2。 </p>
                                           <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;"> </p>
                                           <p class="article-p" style="text-indent:24.0pt;line-height:18.0pt;">车牌识别系统的计时时长是&Delta;t（&Delta;t=t2-t1）,而检定仪的标准计时时长是&Delta;T（&Delta;T=T2-T1）。因而我们可以得到车牌识别停车计时系统的计时误差为:&Delta;t-&Delta;T。 </p>

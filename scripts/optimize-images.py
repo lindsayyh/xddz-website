@@ -103,7 +103,7 @@ def process_file(path: Path) -> tuple[str, int, int, Path | None]:
             return ("compress", before, after, None)
 
         # PNG (and odd casing): try WebP if smaller
-        webp_path = path.with_suffix(".webp")
+        webp_path = path.with_suffix(".png")
         save_webp(im, webp_path)
         webp_size = webp_path.stat().st_size
 
