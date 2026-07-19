@@ -10,6 +10,7 @@ on:
     # Deploy from this feature branch without merging to master first.
     # Add master later if you want the live Pages site to follow master after merge.
     branches:
+      - cursor/bilingual-nav-en-9aba
       - cursor/optimize-images-loading-9aba
       - master
   workflow_dispatch:

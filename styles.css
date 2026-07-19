@@ -3030,3 +3030,44 @@ body.product-lightbox-open {
     cursor: default;
   }
 }
+
+/* ===== Language switcher (hamburger menu) ===== */
+.lang-switcher {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .lang-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .lang-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    padding: 4px 2px;
+  }
+
+  .lang-link.is-active {
+    color: var(--color-teal);
+    font-weight: 600;
+  }
+
+  .lang-link:not(.is-active):hover {
+    color: var(--color-navy);
+  }
+
+  .lang-sep {
+    color: var(--color-border);
+    font-weight: 400;
+    user-select: none;
+  }
+}
