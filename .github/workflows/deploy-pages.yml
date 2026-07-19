@@ -1,0 +1,48 @@
+# Deploy the static site to GitHub Pages.
+# Pushes to this feature branch OR master update:
+#   https://lindsayyh.github.io/xddz-website/
+# You do NOT need to merge the PR first — enable Pages (Source: GitHub Actions)
+# and this workflow will publish the branch you push.
+name: Deploy GitHub Pages
+
+on:
+  push:
+    # Deploy from this feature branch without merging to master first.
+    # Add master later if you want the live Pages site to follow master after merge.
+    branches:
+      - cursor/bilingual-nav-en-9aba
+      - cursor/optimize-images-loading-9aba
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Whole repo is a static site (HTML/CSS/JS/images).
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

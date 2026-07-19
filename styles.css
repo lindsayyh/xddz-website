@@ -15,7 +15,9 @@
   --radius: 12px;
   --radius-sm: 8px;
   --header-height: 88px;
-  --font: "Noto Sans SC", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  /* System CJK fonts only — avoid Google Fonts (often slow/blocked in China). */
+  --font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", sans-serif;
 }
 
 /* ===== 基础 ===== */
@@ -3026,5 +3028,46 @@ body.product-lightbox-open {
 
   .product-showcase-main--zoomable {
     cursor: default;
+  }
+}
+
+/* ===== Language switcher (hamburger menu) ===== */
+.lang-switcher {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .lang-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .lang-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    padding: 4px 2px;
+  }
+
+  .lang-link.is-active {
+    color: var(--color-teal);
+    font-weight: 600;
+  }
+
+  .lang-link:not(.is-active):hover {
+    color: var(--color-navy);
+  }
+
+  .lang-sep {
+    color: var(--color-border);
+    font-weight: 400;
+    user-select: none;
   }
 }
